@@ -1,4 +1,3 @@
-
 package fastfoodjava;
 
 public class menuList {
