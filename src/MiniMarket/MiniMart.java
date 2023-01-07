@@ -1,9 +1,9 @@
 
-package fastfoodjava;
+package MiniMarket;
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
-public class FastFoodJava {
+public class MiniMart {
 
     public static void main(String[] args) {
         DecimalFormat df2 = new DecimalFormat("#.00");
