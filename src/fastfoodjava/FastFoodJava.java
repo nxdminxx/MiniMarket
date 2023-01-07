@@ -1,5 +1,5 @@
 
-package MiniMarket;
+package fastfoodjava;
 import java.util.Scanner;
 import java.text.DecimalFormat;
 

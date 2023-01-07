@@ -1,5 +1,5 @@
 
-package MiniMarket;
+package fastfoodjava;
 
 public class receipt {
     public double priceA,priceB,priceC,priceD,priceE,overAllTotal,overAllTotalTax;

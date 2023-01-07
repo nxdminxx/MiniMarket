@@ -1,4 +1,4 @@
-package MiniMarket;
+package fastfoodjava;
 public class order {
     public String entreeA = null,entreeB = null,entreeC = null,
             entreeD = null,entreeE = null;

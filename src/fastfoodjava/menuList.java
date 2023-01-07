@@ -1,4 +1,4 @@
-package MiniMarket;
+package fastfoodjava;
 
 public class menuList {
 	public String nameA,nameB,nameC,nameD,nameE;
