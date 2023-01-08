@@ -12,7 +12,7 @@ public class MiniMart {
         char other = 'Y', more ='Y';
         double numOrder;
 // ENTREE OBJECT
-      	menuList entree = new menuList();
+      	Product entree = new Product();
 	entree.nameA = "JavaChicken";
 	entree.priceA = 6.50;
         entree.nameB = "Chicken JavaNuggets";
@@ -24,7 +24,7 @@ public class MiniMart {
         entree.nameE = "Tofu Burger";
         entree.priceE = 3.49;
 //SIDE DISH OBJECT
-        menuList sideDish = new menuList();
+        Product sideDish = new Product();
         sideDish.nameA = "Apple Pie";
 	sideDish.priceA = 2.49;
         sideDish.nameB = "Butter Spread";
@@ -36,7 +36,7 @@ public class MiniMart {
         sideDish.nameE = "Rice Cracker";
         sideDish.priceE = 1.49;
 //DRINK OBJECT
-        menuList drink = new menuList();
+        Product drink = new Product();
         drink.nameA = "Cafe Mocha";
 	drink.priceA = 1.99;
         drink.nameB = "Cafe Latte";
@@ -76,7 +76,7 @@ public class MiniMart {
 // USER INPUT ORDER
     Scanner user = new Scanner (System.in);
     receipt orders = new receipt();
-    order orderList = new order();
+    Order orderList = new Order();
     
     do{
     System.out.print("Enter the menu number (1 - 3): ");
@@ -94,7 +94,7 @@ public class MiniMart {
                 entree.numOrderA = (int) numOrder;
                 totalpriceA(entree);
                 
-                menuList totalOfA = new menuList();
+                Product totalOfA = new Product();
                 orders.totalEntreeA = entree.getTotalA();
                 
                 orderList.setEntreeA(entree.getNameA());
@@ -108,7 +108,7 @@ public class MiniMart {
                 entree.numOrderB = (int) numOrder;
                 totalpriceB(entree);
                 
-                menuList totalOfB = new menuList();
+                Product totalOfB = new Product();
                 orders.totalEntreeB = entree.getTotalB();
                 
                 orderList.setEntreeB(entree.getNameB());
@@ -121,7 +121,7 @@ public class MiniMart {
                 entree.numOrderC = (int) numOrder;
                 totalpriceC(entree);
                 
-                menuList totalOfC = new menuList();
+                Product totalOfC = new Product();
                 totalOfC.getTotalC();
                 orders.totalEntreeC = entree.getTotalC();
                 
@@ -135,7 +135,7 @@ public class MiniMart {
                 entree.numOrderD = (int) numOrder;
                 totalpriceD(entree);
                 
-                menuList totalOfD = new menuList();
+                Product totalOfD = new Product();
                 totalOfD.getTotalD();
                 orders.totalEntreeD = entree.getTotalD();
                 
@@ -149,7 +149,7 @@ public class MiniMart {
                 entree.numOrderE = (int) numOrder;
                 totalpriceE(entree);
                 
-                menuList totalOfE= new menuList();
+                Product totalOfE= new Product();
                 totalOfE.getTotalE();
                 orders.totalEntreeE= entree.getTotalE();
                 
@@ -175,7 +175,7 @@ public class MiniMart {
                 sideDish.numOrderA = (int) numOrder;
                 totalpriceA(sideDish);
                 
-                menuList totalOfA = new menuList();
+                Product totalOfA = new Product();
                 orders.totalSideDishA = sideDish.getTotalA();
                 
                 orderList.setSideDishA(sideDish.getNameA());
@@ -187,7 +187,7 @@ public class MiniMart {
                 sideDish.numOrderB = (int) numOrder;
                 totalpriceB(sideDish);
                 
-                menuList totalOfB = new menuList();
+                Product totalOfB = new Product();
                 orders.totalSideDishB = sideDish.getTotalB();
                 
                 orderList.setSideDishB(sideDish.getNameB());
@@ -199,7 +199,7 @@ public class MiniMart {
                 sideDish.numOrderC = (int) numOrder;
                 totalpriceC(sideDish);
                 
-                menuList totalOfC = new menuList();
+                Product totalOfC = new Product();
                 orders.totalSideDishC = sideDish.getTotalC();
                 
                 orderList.setSideDishC(sideDish.getNameC());
@@ -211,7 +211,7 @@ public class MiniMart {
                 sideDish.numOrderD = (int) numOrder;
                 totalpriceD(sideDish);
                 
-                menuList totalOfD = new menuList();
+                Product totalOfD = new Product();
                 orders.totalSideDishD = sideDish.getTotalD();
                 
                 orderList.setSideDishD(sideDish.getNameD());
@@ -223,7 +223,7 @@ public class MiniMart {
                 sideDish.numOrderE = (int) numOrder;
                 totalpriceE(sideDish);
                 
-                menuList totalOfE = new menuList();
+                Product totalOfE = new Product();
                 orders.totalSideDishE = sideDish.getTotalE();
                 
                 orderList.setSideDishE(sideDish.getNameE());
@@ -248,7 +248,7 @@ public class MiniMart {
                 drink.numOrderA = (int) numOrder;
                 totalpriceA(drink);
                 
-                menuList totalOfA = new menuList();
+                Product totalOfA = new Product();
                 orders.totalDrinkA = drink.getTotalA();
                 
                 orderList.setDrinkA(drink.getNameA());
@@ -260,7 +260,7 @@ public class MiniMart {
                 drink.numOrderB = (int) numOrder;
                 totalpriceB(drink);
                 
-                menuList totalOfB = new menuList();
+                Product totalOfB = new Product();
                 orders.totalDrinkB = drink.getTotalB();
                 
                 orderList.setDrinkB(drink.getNameB());
@@ -272,7 +272,7 @@ public class MiniMart {
                 drink.numOrderC = (int) numOrder;
                 totalpriceC(drink);
                 
-                menuList totalOfC = new menuList();
+                Product totalOfC = new Product();
                 orders.totalDrinkC = drink.getTotalC();
                 
                 orderList.setDrinkC(drink.getNameC());
@@ -284,7 +284,7 @@ public class MiniMart {
                 drink.numOrderD = (int) numOrder;
                 totalpriceD(drink);
                 
-                menuList totalOfD = new menuList();
+                Product totalOfD = new Product();
                 orders.totalDrinkD = drink.getTotalD();
                 
                 orderList.setDrinkD(drink.getNameD());
@@ -296,7 +296,7 @@ public class MiniMart {
                 drink.numOrderE = (int) numOrder;
                 totalpriceE(drink);
                 
-                menuList totalOfE = new menuList();
+                Product totalOfE = new Product();
                 orders.totalDrinkE = drink.getTotalE();
                 
                 orderList.setDrinkE(drink.getNameE());
@@ -415,24 +415,24 @@ public class MiniMart {
             df2.format(orders.getOverAllTotal()));
 
     }//main
-    public static void totalpriceA(menuList tot){
+    public static void totalpriceA(Product tot){
         DecimalFormat df2 = new DecimalFormat("#.00");
         System.out.println("\tTotal Price : $"+df2.format(tot.getTotalA()));
 
     }
-    public static void totalpriceB(menuList tot){
+    public static void totalpriceB(Product tot){
         DecimalFormat df2 = new DecimalFormat("#.00");
         System.out.println("\tTotal Price : $"+df2.format(tot.getTotalB()));
     }
-       public static void totalpriceC(menuList tot){
+       public static void totalpriceC(Product tot){
         DecimalFormat df2 = new DecimalFormat("#.00");
         System.out.println("\tTotal Price : $"+df2.format(tot.getTotalC())); 
     }
-    public static void totalpriceD(menuList tot){
+    public static void totalpriceD(Product tot){
         DecimalFormat df2 = new DecimalFormat("#.00");
         System.out.println("\tTotal Price : $"+df2.format(tot.getTotalD())); 
     }
-    public static void totalpriceE(menuList tot){
+    public static void totalpriceE(Product tot){
         DecimalFormat df2 = new DecimalFormat("#.00");
         System.out.println("\tTotal Price : $"+df2.format(tot.getTotalE())); 
     }

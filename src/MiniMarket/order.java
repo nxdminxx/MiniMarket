@@ -1,5 +1,5 @@
 package MiniMarket;
-public class order {
+public class Order {
     public String entreeA = null,entreeB = null,entreeC = null,
             entreeD = null,entreeE = null;
     public String sideDishA =null,sideDishB =null,sideDishC =null,

@@ -1,13 +1,13 @@
 package MiniMarket;
 
-public class menuList {
+public class Product {
 	public String nameA,nameB,nameC,nameD,nameE;
 	public double priceA,priceB,priceC,priceD,priceE;
         public double total,totalA,totalB,totalC,totalD,totalE,overAllTotal;
         public char more;
         public int numOrderA,numOrderB,numOrderC,numOrderD,numOrderE;
 
-	public menuList(){
+	public Product(){
             nameA = "";
             nameB = "";
             nameC = "";
