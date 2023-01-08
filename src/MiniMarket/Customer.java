@@ -1,5 +1,5 @@
 package MiniMarket;
 
-public class Product {
+public class Customer {
     
 }
