@@ -19,7 +19,8 @@ public class Main {
                 ArrayList<ProductCategory> producefood = new ArrayList<ProductCategory>();
                 
                 ArrayList<Orders> orderList = new ArrayList<Orders>(); 
-                ArrayList<Orders> MyOrder = new ArrayList<Orders>(); 
+                ArrayList<Orders> MyOrder = new ArrayList<Orders>();
+                
                 Orders order1 = new Orders();
                 char category;
                 char addOrder;
