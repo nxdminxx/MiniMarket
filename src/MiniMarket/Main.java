@@ -2,6 +2,7 @@ package MiniMarket;
 
 //import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -101,7 +102,7 @@ public class Main {
                         System.out.println("\nProduct \tID \tWeight/Volume \tPrice (RM)");
                         System.out.println("-------------------------------------------------");
 
-                        personalcare.forEach(System.out::println);
+                        personalcare.forEach(System.out::println); //print personal item list
 
                         System.out.println("-------------------------------------------------");
                         //do while for same category
@@ -112,7 +113,7 @@ public class Main {
                             System.out.print("\nEnter item quantity : ");
                             quantity = input.nextInt();
 
-                            insertOrder(personalcare, orderList, order1, item, quantity);
+                            insertOrder(personalcare, orderList, order1, item, quantity); 
                             System.out.print("\nDo you want to add anoter item from the same category?(Y/N) : ");
                             addOrder = input.next().charAt(0);
 
@@ -201,12 +202,32 @@ public class Main {
             
         }
 
-    private static void insertOrder(ArrayList<ProductCategory> product, ArrayList<Orders> orderList, Orders order1,
+    public static void insertOrder(ArrayList<ProductCategory> product, ArrayList<Orders> orderList, Orders order1,
             int item, int quantity) {
+
         double productPrice = product.get(item).getProductPrice();
         order1.setQuantity(quantity);
         order1.calcTotalPrice(productPrice);
+        //order1.setOrder;
+
         orderList.add(order1);
+    }
+
+    public static void resit(Customer Customer){
+
+        System.out.println("--------------Customer Detail--------------");
+        System.out.println("Customer ID\n\nCustomer Name\n\nCustomer Phone No");
+        System.out.println(Customer.toString());
+
+        System.out.println("-------------------------------------------------");
+
+        System.out.println("--------------My Order--------------");
+        System.out.println("\nProduct \tID \tWeight/Volume \tPrice (RM)");
+        System.out.println(Orders.display);
+
+        
+
+        
     }
         
 }

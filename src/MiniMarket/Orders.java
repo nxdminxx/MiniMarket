@@ -5,47 +5,56 @@ import java.util.ArrayList;
 public class Orders{
 
     private int quantity;
-    // Customer customer;
-    ProductCategory product;
+    Customer customer;
     private double totalPrice;
-    ArrayList<ProductCategory> newOrder = new ArrayList<ProductCategory>();
+    private static int numOfOrder = 0;
+    ProductCategory product;
     
+    // ArrayList<Orders> orderList = new ArrayList<Orders>();
+    // ArrayList<Orders> orderID = new ArrayList<Orders>(); 
+
+
     public Orders(){
-   
+        numOfOrder++;
     }
 
-    public Orders(int quantity, ProductCategory prod){
+    public Orders(int orderID, int quantity, ProductCategory prod){ 
         this.quantity = quantity;
         product = prod;
     }
 
-    public String display(ProductCategory prod){
-        return product.toString();
+    public int getOrderID(){
+
+        return numOfOrder;
+    
     }
 
     public void setQuantity(int quantity){
         this.quantity = quantity;
     }
 
-    public double calcTotalPrice(double pp) {
+    public double calcTotalPrice(double productPrice) {
 
-        totalPrice = pp * quantity;
+        totalPrice = productPrice * quantity;
 
         return totalPrice;
     }
 
-    public void setOrderID(String orderID){
-        
-    }
-
-    public void displayOrder(){
-
-        System.out.println("\nYour Order");
-        System.out.println("\nProduct \tID \tWeight/Volume \tPrice (RM) \tQuantity \tTotal (RM)");
-        System.out.println(product.toString() + quantity + totalPrice);
-
-    }
 
 
+    // public void setOrderID(ArrayList<Orders> orderList){
+
+    //     this.orderID = orderList;
     
+    // }
+
+    public ArrayList<Orders> getOrderList() {
+
+        return orderID;
+    }
+
+    public String display(ProductCategory prod){
+        return product.toString()+"\t\t"+quantity+"\t\t"+totalPrice;
+    }
+
 }
