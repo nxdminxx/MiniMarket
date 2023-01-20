@@ -2,7 +2,7 @@ package MiniMarket;
 
 import java.util.ArrayList;
 
-public class Orders{
+class Orders{
 
     private int quantity;
     Customer customer;
