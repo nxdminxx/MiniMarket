@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Main {
 
     ///////private final DecimalFormat df = new DecimalFormat("0.00");
+    //hello zatii
 
     public static void main(String[] args){
 
