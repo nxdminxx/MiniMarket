@@ -31,8 +31,6 @@ public class Main {
                 int item;
                 int quantity;
 
-                
-
                 //Object for Personal Care
                 ProductCategory shampoo = new PersonalCare("Hair Shampoo",1,"170ml",12.50);
                 ProductCategory bodyWash = new PersonalCare("Body Wash",2,"950ml",18.90);
