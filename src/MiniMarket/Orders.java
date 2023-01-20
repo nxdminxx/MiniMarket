@@ -9,6 +9,7 @@ public class Orders{
     private double totalPrice;
     private static int numOfOrder = 0;
     ProductCategory product;
+    public Object totalQty;
     
     // ArrayList<Orders> orderList = new ArrayList<Orders>();
     // ArrayList<Orders> orderID = new ArrayList<Orders>(); 
@@ -43,7 +44,7 @@ public class Orders{
     public void setOrderID(String orderID){
         
     }
-    public void displayOrder1(String product,int quantity){
+    public void displayOrder1(String product){
 
         System.out.println("\nYour Order");
         System.out.println("\nProduct \tID \tWeight/Volume \tPrice (RM) \tQuantity \tTotal (RM)");

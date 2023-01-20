@@ -20,9 +20,10 @@ public class Main {
                 ArrayList<ProductCategory> cannedfood = new ArrayList<ProductCategory>();
                 ArrayList<ProductCategory> producefood = new ArrayList<ProductCategory>();
                 
-                ArrayList<Orders> orderList = new ArrayList<Orders>(); 
                 ArrayList<Orders> MyOrder = new ArrayList<Orders>(); 
                 ArrayList<Double> totalAll = new ArrayList<>();
+                ArrayList<Integer> totalQty = new ArrayList<>();
+                ArrayList<Character> orderList = new ArrayList(); 
                 
                 Orders order1 = new Orders();
                 char category;
@@ -32,11 +33,11 @@ public class Main {
                 int quantity;
 
                 //Object for Personal Care
-                ProductCategory shampoo = new PersonalCare("Hair Shampoo",1,"170ml",12.50);
-                ProductCategory bodyWash = new PersonalCare("Body Wash",2,"950ml",18.90);
-                ProductCategory toothPaste = new PersonalCare("Toothpaste",3,"100g",9.60);
-                ProductCategory toothBrush = new PersonalCare("Tooth Brush",4,"50g",5.00);
-                ProductCategory faceWash = new PersonalCare("Face Wash",5,"100ml",9.00);
+                ProductCategory shampoo = new PersonalCare("Hair Shampoo",0,"170ml",12.50);
+                ProductCategory bodyWash = new PersonalCare("Body Wash",1,"950ml",18.90);
+                ProductCategory toothPaste = new PersonalCare("Toothpaste",2,"100g",9.60);
+                ProductCategory toothBrush = new PersonalCare("Tooth Brush",3,"50g",5.00);
+                ProductCategory faceWash = new PersonalCare("Face Wash",4,"100ml",9.00);
                 //save all obj in arrylist personal care
                 personalcare.add(shampoo);
                 personalcare.add(bodyWash);
@@ -45,11 +46,11 @@ public class Main {
                 personalcare.add(faceWash);
 
                 //Object for Frozen Foods
-                ProductCategory fries = new FrozenFoods("Frozen Fries",'a',"1kg",13.00);
-                ProductCategory nuggets = new FrozenFoods("Chicken Nuggets",'b',"1kg",15.90);
-                ProductCategory chicken = new FrozenFoods("Chicken Meat",'c',"300g",17.80);
-                ProductCategory beef = new FrozenFoods("Beef Meat",'d',"300g",19.90);
-                ProductCategory pizza = new FrozenFoods("Frozen Pizza",'e',"180g",8.15);
+                ProductCategory fries = new FrozenFoods("Frozen Fries",0,"1kg",13.00);
+                ProductCategory nuggets = new FrozenFoods("Chicken Nuggets",1,"1kg",15.90);
+                ProductCategory chicken = new FrozenFoods("Chicken Meat",2,"300g",17.80);
+                ProductCategory beef = new FrozenFoods("Beef Meat",3,"300g",19.90);
+                ProductCategory pizza = new FrozenFoods("Frozen Pizza",4,"180g",8.15);
                 //save all obj in arrylist frozen food
                 frozenfood.add(fries);
                 frozenfood.add(nuggets);
@@ -58,11 +59,11 @@ public class Main {
                 frozenfood.add(pizza);
 
                 //Object for Canned Foods
-                ProductCategory beans = new CannedFoods("Baked Beans",'a',"425g",4.46);
-                ProductCategory corn = new CannedFoods("Canned Corn",'b',"418g",5.39);
-                ProductCategory sardines = new CannedFoods("Sardines",'c',"155g",4.65);
-                ProductCategory tuna = new CannedFoods("Canned Tuna",'d',"150g",8.81);
-                ProductCategory tomato = new CannedFoods("Tomato Sauce",'e',"220g",4.71);
+                ProductCategory beans = new CannedFoods("Baked Beans",0,"425g",4.46);
+                ProductCategory corn = new CannedFoods("Canned Corn",1,"418g",5.39);
+                ProductCategory sardines = new CannedFoods("Sardines",2,"155g",4.65);
+                ProductCategory tuna = new CannedFoods("Canned Tuna",3,"150g",8.81);
+                ProductCategory tomato = new CannedFoods("Tomato Sauce",4,"220g",4.71);
                 //save all obj in arrylist frozen food
                 cannedfood.add(beans);
                 cannedfood.add(corn);
@@ -71,12 +72,12 @@ public class Main {
                 cannedfood.add(tomato);
 
                 //Object for Produced Foods
-                ProductCategory broccoli = new ProduceFoods("Broccoli",'a',"500g",12.35);
-                ProductCategory potatoes = new ProduceFoods("Red Potatoes",'b',"500g",10.65);
-                ProductCategory eggplant = new ProduceFoods("ggplants",'c',"150g",5.45);
-                ProductCategory eggs = new ProduceFoods("Fresh Eggs",'d',"12pcs",10.11);
-                ProductCategory banana = new ProduceFoods("Fresh Banana",'e',"800g",4.90);
-                ProductCategory apple = new ProduceFoods("Fresh Apples",'f',"500g",8.96);
+                ProductCategory broccoli = new ProduceFoods("Broccoli",0,"500g",12.35);
+                ProductCategory potatoes = new ProduceFoods("Red Potatoes",1,"500g",10.65);
+                ProductCategory eggplant = new ProduceFoods("ggplants",2,"150g",5.45);
+                ProductCategory eggs = new ProduceFoods("Fresh Eggs",3,"12pcs",10.11);
+                ProductCategory banana = new ProduceFoods("Fresh Banana",4,"800g",4.90);
+                ProductCategory apple = new ProduceFoods("Fresh Apples",5,"500g",8.96);
                 //save all obj in arrylist frozen food
                 producefood.add(broccoli);
                 producefood.add(potatoes);
@@ -113,9 +114,13 @@ public class Main {
                             System.out.print("\nEnter item quantity : ");
                             quantity = input.nextInt();
 
-                            insertOrder(personalcare, orderList, order1, item, quantity,totalAll);
+                            totalQty.add(quantity);
+
                             System.out.print("\nDo you want to add anoter item from the same category?(Y/N) : ");
                             addOrder = input.next().charAt(0);
+
+                            orderList.add(addOrder);
+                            insertOrder(personalcare, orderList, order1, item, totalQty,totalAll);
 
                         }while(addOrder == 'Y');
                         break;
@@ -136,7 +141,7 @@ public class Main {
                             System.out.print("\nEnter item quantity : ");
                             quantity = input.nextInt();
 
-                            insertOrder(frozenfood, orderList, order1, item, quantity,totalAll);
+                            insertOrder(personalcare, orderList, order1, item, totalQty,totalAll);
                             System.out.print("\nDo you want to add anoter item from the same category?(Y/N) : ");
                             addOrder = input.next().charAt(0);
 
@@ -159,7 +164,7 @@ public class Main {
                             System.out.print("\nEnter item quantity : ");
                             quantity = input.nextInt();
 
-                            insertOrder(cannedfood, orderList, order1, item, quantity,totalAll);
+                            insertOrder(personalcare, orderList, order1, item, totalQty,totalAll);
                             System.out.print("\nDo you want to add anoter item from the same category?(Y/N) : ");
                             addOrder = input.next().charAt(0);
 
@@ -182,7 +187,7 @@ public class Main {
                             System.out.print("\nEnter item quantity : ");
                             quantity = input.nextInt();
 
-                            insertOrder(producefood, orderList, order1, item, quantity,totalAll);
+                            insertOrder(personalcare, orderList, order1, item, totalQty,totalAll);
                             System.out.print("\nDo you want to add anoter item from the same category?(Y/N) : ");
                             addOrder = input.next().charAt(0);
 
@@ -204,14 +209,23 @@ public class Main {
             
         }
 
-    private static void insertOrder(ArrayList<ProductCategory> product, ArrayList<Orders> orderList, Orders order1,
-            int item, int quantity,ArrayList<Double>totalAll) {
-                
-        String products = product.get(item).toString();
+    private static void insertOrder(ArrayList<ProductCategory> product, ArrayList<Character> orderList, Orders order1,
+            int item,ArrayList<Integer>totalQty,ArrayList<Double>totalAll) {
+        
+        //show item name
+        String itemName = product.get(item).toString();
+        order1.displayOrder1(itemName);
+
+        //calculate total qty
+        int productQty = totalQty.get(item);
+        order1.setQuantity(productQty);
+        totalQty.add(Integer.valueOf(productQty));
+
+        //calculate total qty price
         double productPrice = product.get(item).getProductPrice();
-        order1.setQuantity(quantity);
         double totalProductPrice = order1.calcTotalPrice(productPrice);
         totalAll.add(Double.valueOf(totalProductPrice));
+
         // System.out.println(order1.displayOrder());
         // System.out.println(products);
         // order1.displayOrder1(products,quantity);
