@@ -8,6 +8,7 @@ public class Main {
 
     ///////private final DecimalFormat df = new DecimalFormat("0.00");
     //HELLO IPAH
+    //hello balas kt branch
     public static void main(String[] args){
 
             try (Scanner input = new Scanner(System.in)) {
