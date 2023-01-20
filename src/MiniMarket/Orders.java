@@ -1,45 +1,51 @@
 package MiniMarket;
+
 import java.util.ArrayList;
 
-public class Orders {
+public class Orders{
 
-    private String orderID;
-    Customer customer;
-    ArrayList<Product> Product;
+    private int quantity;
+    // Customer customer;
+    ProductCategory product;
+    private double totalPrice;
+    ArrayList<ProductCategory> newOrder = new ArrayList<ProductCategory>();
     
-    Orders(){
-
+    public Orders(){
+   
     }
 
-    Orders(Customer customer,ArrayList<Product> product){
-        
+    public Orders(int quantity, ProductCategory prod){
+        this.quantity = quantity;
+        product = prod;
     }
 
-    public String getOrderID(){
-
-        return orderID;
-
+    public String display(ProductCategory prod){
+        return product.toString();
     }
 
-    public Customer getCustomer(){
-
-        return customer;
-        
+    public void setQuantity(int quantity){
+        this.quantity = quantity;
     }
 
-    public ArrayList<MiniMarket.Product> getProduct(){
+    public double calcTotalPrice(double pp) {
 
-        return Product;
+        totalPrice = pp * quantity;
 
-    }
-
-    public double calcTotalPrice(){
-
-        return 0;
-
+        return totalPrice;
     }
 
     public void setOrderID(String orderID){
         
     }
+
+    public void displayOrder(){
+
+        System.out.println("\nYour Order");
+        System.out.println("\nProduct \tID \tWeight/Volume \tPrice (RM) \tQuantity \tTotal (RM)");
+        System.out.println(product.toString() + quantity + totalPrice);
+
+    }
+
+
+    
 }
