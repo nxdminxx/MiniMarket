@@ -20,6 +20,8 @@ public class Main {
                 
                 ArrayList<Orders> orderList = new ArrayList<Orders>(); 
                 ArrayList<Orders> MyOrder = new ArrayList<Orders>(); 
+                ArrayList<Double> totalAll = new ArrayList<>();
+                
                 Orders order1 = new Orders();
                 char category;
                 char addOrder;
@@ -111,7 +113,7 @@ public class Main {
                             System.out.print("\nEnter item quantity : ");
                             quantity = input.nextInt();
 
-                            insertOrder(personalcare, orderList, order1, item, quantity);
+                            insertOrder(personalcare, orderList, order1, item, quantity,totalAll);
                             System.out.print("\nDo you want to add anoter item from the same category?(Y/N) : ");
                             addOrder = input.next().charAt(0);
 
@@ -134,7 +136,7 @@ public class Main {
                             System.out.print("\nEnter item quantity : ");
                             quantity = input.nextInt();
 
-                            insertOrder(frozenfood, orderList, order1, item, quantity);
+                            insertOrder(frozenfood, orderList, order1, item, quantity,totalAll);
                             System.out.print("\nDo you want to add anoter item from the same category?(Y/N) : ");
                             addOrder = input.next().charAt(0);
 
@@ -157,7 +159,7 @@ public class Main {
                             System.out.print("\nEnter item quantity : ");
                             quantity = input.nextInt();
 
-                            insertOrder(cannedfood, orderList, order1, item, quantity);
+                            insertOrder(cannedfood, orderList, order1, item, quantity,totalAll);
                             System.out.print("\nDo you want to add anoter item from the same category?(Y/N) : ");
                             addOrder = input.next().charAt(0);
 
@@ -180,7 +182,7 @@ public class Main {
                             System.out.print("\nEnter item quantity : ");
                             quantity = input.nextInt();
 
-                            insertOrder(producefood, orderList, order1, item, quantity);
+                            insertOrder(producefood, orderList, order1, item, quantity,totalAll);
                             System.out.print("\nDo you want to add anoter item from the same category?(Y/N) : ");
                             addOrder = input.next().charAt(0);
 
@@ -194,22 +196,31 @@ public class Main {
 
                 }while(addFromCategory =='Y');
       
-                orderList.toArray();
-                System.out.println(orderList);
+                // orderList.toArray();
+                System.out.println(orderList.toString());
+                System.out.println(totalAll);
+
             }
             
         }
 
     private static void insertOrder(ArrayList<ProductCategory> product, ArrayList<Orders> orderList, Orders order1,
-            int item, int quantity) {
+            int item, int quantity,ArrayList<Double>totalAll) {
+                
+        String products = product.get(item).toString();
         double productPrice = product.get(item).getProductPrice();
         order1.setQuantity(quantity);
-        order1.calcTotalPrice(productPrice);
-        orderList.add(order1);
+        double totalProductPrice = order1.calcTotalPrice(productPrice);
+        totalAll.add(Double.valueOf(totalProductPrice));
+        // System.out.println(order1.displayOrder());
+        // System.out.println(products);
+        // order1.displayOrder1(products,quantity);
+        // orderList.add();
+        
+    
     }
         
 }
-
     /*private static void displayProducts(ArrayList<ProductCategory> personalcare) {
         System.out.println(personalcare.toString());
         // System.out.println(df.format(prodName.getProductPrice()));

@@ -37,15 +37,11 @@ public class Orders{
     public void setOrderID(String orderID){
         
     }
-
-    public void displayOrder(){
+    public void displayOrder1(String product,int quantity){
 
         System.out.println("\nYour Order");
         System.out.println("\nProduct \tID \tWeight/Volume \tPrice (RM) \tQuantity \tTotal (RM)");
-        System.out.println(product.toString() + quantity + totalPrice);
-
+        System.out.println(product.toString() +"\t\t"+ quantity +"\t"+ "\t"+totalPrice);
     }
-
-
-    
+   
 }
