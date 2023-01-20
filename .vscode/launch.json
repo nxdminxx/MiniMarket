@@ -25,6 +25,13 @@
             "request": "launch",
             "mainClass": "MiniMarket.MiniMart",
             "projectName": "MiniMarket_c93faf50"
-        }
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "MiniMarket.Main",
+            "projectName": "MiniMarket_510c0d78"
+        },
     ]
 }
