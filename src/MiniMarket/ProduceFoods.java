@@ -2,13 +2,13 @@ package MiniMarket;
 
 public class ProduceFoods extends ProductCategory {
     private String productName;
-    public char productID;
+    public int productID;
     private String productDescription;
     private double productPrice;
     //private double totalItemPrice;
 
     public ProduceFoods(String productName,
-                        char productID, 
+                        int productID, 
                         String productDesciprtion, 
                         double productPrice){
         this.productName = productName;
