@@ -209,23 +209,13 @@ public class Main {
             
         }
 
-    private static void insertOrder(ArrayList<ProductCategory> product, ArrayList<Character> orderList, Orders order1,
-            int item,ArrayList<Integer>totalQty,ArrayList<Double>totalAll) {
-        
-        //show item name
-        String itemName = product.get(item).toString();
-        order1.displayOrder1(itemName);
-
-        //calculate total qty
-        int productQty = totalQty.get(item);
-        order1.setQuantity(productQty);
-        totalQty.add(Integer.valueOf(productQty));
-
-        //calculate total qty price
+    private static void insertOrder(ArrayList<ProductCategory> product, ArrayList<Orders> orderList, Orders order1,
+            int item, int quantity,ArrayList<Double>totalAll) {
+                
+        String products = product.get(item).toString();
         double productPrice = product.get(item).getProductPrice();
         double totalProductPrice = order1.calcTotalPrice(productPrice);
         totalAll.add(Double.valueOf(totalProductPrice));
-
         // System.out.println(order1.displayOrder());
         // System.out.println(products);
         // order1.displayOrder1(products,quantity);
