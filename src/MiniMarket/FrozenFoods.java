@@ -2,13 +2,13 @@ package MiniMarket;
 
 public class FrozenFoods extends ProductCategory{
     private String productName;
-    public char productID;
+    public int productID;
     private String productDescription;
     private double productPrice;
     private double totalItemPrice;
 
     public FrozenFoods(String productName,
-                        char productID, 
+                        int productID, 
                         String productDesciprtion, 
                         double productPrice){
         this.productName = productName;

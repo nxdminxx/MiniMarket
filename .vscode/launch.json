@@ -9,7 +9,11 @@
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "MiniMarket.Main",
+<<<<<<< HEAD
             "projectName": "MiniMarket_f9c8ed4b"
+=======
+            "projectName": "MiniMarket_510c0d78"
+>>>>>>> 7e2cfec0cc477eece3076796001ebd6d9141c4f5
         },
         {
             "type": "java",

@@ -35,4 +35,9 @@ public class Customer {
         custPhoneNo = newPhone;
     }
 
+    public String toString(){
+
+        return custID+ "\t"+custName+"\t  "+custPhoneNo;
+    }
+
 }
