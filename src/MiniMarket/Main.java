@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
 
     ///////private final DecimalFormat df = new DecimalFormat("0.00");
-
+    //HELLO IPAH
     public static void main(String[] args){
 
             try (Scanner input = new Scanner(System.in)) {
