@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Delivery",
+            "request": "launch",
+            "mainClass": "MiniMarket.Delivery",
+            "projectName": "MiniMarket_c93faf50"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"

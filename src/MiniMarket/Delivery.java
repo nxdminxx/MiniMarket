@@ -1,30 +1,27 @@
 package MiniMarket;
-import java.util.ArrayList;
 
-public class Delivery{
-
-    public static void main (String[]args) {
-
+public class Delivery extends Orders{
     private String deliveryAddress; 
+    private double deliveryCharge;
 
-    public Delivery(Customer cust, prod ArrayList<Product>, String deliveryAddress){
-
-        this.deliveryAddress = deliveryAdrress; 
+    public Delivery(){
+    }
+    public Delivery(Customer cust, String deliveryAddress){
+        this.deliveryAddress = deliveryAddress;
     }
 
-    public double getDeliveryAddress(){
-        return getDeliveryAddress;
+    public String getDeliveryAddress(){
+        return deliveryAddress;
     }
 
-    public void setDeliveryAddress(String deliverAddress){
-        deliveryAddress = deliveryAddress;
+    public void setDeliveryAddress(String address){
+        deliveryAddress = address;
     }
 
-    public double calcDeliveryCharge(){
-        return calcDeliveryCharge;
+    public double calcDeliveryCharge(double charge){
+        
+        deliveryCharge = super.calcTotalPrice + charge;
+        return deliveryCharge; 
     }
 
-    }
-
-    
 }
