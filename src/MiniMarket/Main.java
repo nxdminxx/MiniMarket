@@ -120,6 +120,7 @@ public class Main {
                             addOrder = input.next().charAt(0);
 
                             orderList.add(addOrder);
+
                             insertOrder(personalcare, orderList, order1, item, totalQty,totalAll);
 
                         }while(addOrder == 'Y');
