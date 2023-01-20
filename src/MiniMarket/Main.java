@@ -41,8 +41,6 @@ public class Main {
                 personalcare.add(toothPaste);
                 personalcare.add(toothBrush);
                 personalcare.add(faceWash);
-                //add arraylist personal care in arraylist product
-                product.addAll(personalcare);
 
                 //Object for Frozen Foods
                 ProductCategory fries = new FrozenFoods("Frozen Fries",'a',"1kg",13.00);
@@ -56,8 +54,6 @@ public class Main {
                 frozenfood.add(chicken);
                 frozenfood.add(beef);
                 frozenfood.add(pizza);
-                //add arraylist frozen food in arraylist product
-                product.addAll(frozenfood);
 
                 //Object for Canned Foods
                 ProductCategory beans = new CannedFoods("Baked Beans",'a',"425g",4.46);
@@ -71,8 +67,6 @@ public class Main {
                 cannedfood.add(sardines);
                 cannedfood.add(beef);
                 cannedfood.add(tomato);
-                //add arraylist frozen food in arraylist product
-                product.addAll(cannedfood);
 
                 //Object for Produced Foods
                 ProductCategory broccoli = new ProduceFoods("Broccoli",'a',"500g",12.35);
@@ -88,8 +82,6 @@ public class Main {
                 producefood.add(eggs);
                 producefood.add(banana);
                 producefood.add(apple);
-                //add arraylist produce food in arraylist product
-                product.addAll(producefood);
 
    
                 System.out.println("------------------Java Mini Market------------------");
@@ -107,7 +99,7 @@ public class Main {
 
                         System.out.println("\nProduct \tID \tWeight/Volume \tPrice (RM)");
                         System.out.println("-------------------------------------------------");
-                        //System.out.println(personalcare);
+
                         personalcare.forEach(System.out::println);
 
                         System.out.println("-------------------------------------------------");
@@ -120,6 +112,75 @@ public class Main {
                             quantity = input.nextInt();
 
                             insertOrder(personalcare, orderList, order1, item, quantity);
+                            System.out.print("\nDo you want to add anoter item from the same category?(Y/N) : ");
+                            addOrder = input.next().charAt(0);
+
+                        }while(addOrder == 'Y');
+                        break;
+
+                        case 'b': 
+
+                        System.out.println("\nProduct \tID \tWeight/Volume \tPrice (RM)");
+                        System.out.println("-------------------------------------------------");
+                        //System.out.println(personalcare);
+                        frozenfood.forEach(System.out::println);
+
+                        System.out.println("-------------------------------------------------");
+                        //do while for same category
+                        do{
+                            System.out.print("\nEnter product ID : " );
+                            item = input.nextInt();                        
+
+                            System.out.print("\nEnter item quantity : ");
+                            quantity = input.nextInt();
+
+                            insertOrder(frozenfood, orderList, order1, item, quantity);
+                            System.out.print("\nDo you want to add anoter item from the same category?(Y/N) : ");
+                            addOrder = input.next().charAt(0);
+
+                        }while(addOrder == 'Y');
+                        break;
+
+                        case 'c': 
+
+                        System.out.println("\nProduct \tID \tWeight/Volume \tPrice (RM)");
+                        System.out.println("-------------------------------------------------");
+                        //System.out.println(personalcare);
+                        cannedfood.forEach(System.out::println);
+
+                        System.out.println("-------------------------------------------------");
+                        //do while for same category
+                        do{
+                            System.out.print("\nEnter product ID : " );
+                            item = input.nextInt();                        
+
+                            System.out.print("\nEnter item quantity : ");
+                            quantity = input.nextInt();
+
+                            insertOrder(cannedfood, orderList, order1, item, quantity);
+                            System.out.print("\nDo you want to add anoter item from the same category?(Y/N) : ");
+                            addOrder = input.next().charAt(0);
+
+                        }while(addOrder == 'Y');
+                        break;
+
+                        case 'd': 
+
+                        System.out.println("\nProduct \tID \tWeight/Volume \tPrice (RM)");
+                        System.out.println("-------------------------------------------------");
+                        //System.out.println(personalcare);
+                        producefood.forEach(System.out::println);
+
+                        System.out.println("-------------------------------------------------");
+                        //do while for same category
+                        do{
+                            System.out.print("\nEnter product ID : " );
+                            item = input.nextInt();                        
+
+                            System.out.print("\nEnter item quantity : ");
+                            quantity = input.nextInt();
+
+                            insertOrder(producefood, orderList, order1, item, quantity);
                             System.out.print("\nDo you want to add anoter item from the same category?(Y/N) : ");
                             addOrder = input.next().charAt(0);
 
