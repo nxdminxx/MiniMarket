@@ -12,7 +12,8 @@ public class Main {
 
     public static void main(String[] args){
 
-            try (Scanner input = new Scanner(System.in)) {
+                Scanner input = new Scanner(System.in);
+                Scanner cus = new Scanner(System.in);
 
                 ArrayList<ProductCategory> product = new ArrayList<ProductCategory>();
                 ArrayList<ProductCategory> personalcare = new ArrayList<ProductCategory>();
@@ -22,15 +23,21 @@ public class Main {
                 
                 ArrayList<Orders> MyOrder = new ArrayList<Orders>(); 
                 ArrayList<Double> totalAll = new ArrayList<>();
-                ArrayList<Integer> totalQty = new ArrayList<>();
+                ArrayList<Integer> totalQty = new ArrayList<>(10);
                 ArrayList<Character> orderList = new ArrayList(); 
                 
                 Orders order1 = new Orders();
+
                 char category;
                 char addOrder;
                 char addFromCategory;
                 int item;
                 int quantity;
+
+                Customer cust = new Customer();
+                String name;
+                String id;
+                String PNo;
 
                 //Object for Personal Care
                 ProductCategory shampoo = new PersonalCare("Hair Shampoo",0,"170ml",12.50);
@@ -87,8 +94,20 @@ public class Main {
                 producefood.add(apple);
 
    
-                System.out.println("------------------Java Mini Market------------------");
-                
+                System.out.println("------------------Welcome to Java Mini Market------------------");
+                System.out.println("Please Enter Your Detail");
+                System.out.println("Your ID :");
+                id = cus.nextLine();
+                cust.setCustID(id);;
+
+                System.out.println("Name :");
+                name = cus.nextLine();
+                cust.setCustName(name);
+
+                System.out.println("Phone Number :");
+                PNo = cus.nextLine();
+                cust.setPhone(PNo);
+
                     do{
                         System.out.println("CATEGORY");
                         System.out.println("(a)Personal Care\n(b)Frozen Foods/Meats\n(c)Canned Foods\n(d)Produced Foods");
@@ -116,12 +135,14 @@ public class Main {
 
                             totalQty.add(quantity);
 
+                            insertOrder(personalcare, orderList, order1, item, totalQty,totalAll);
+
                             System.out.print("\nDo you want to add anoter item from the same category?(Y/N) : ");
                             addOrder = input.next().charAt(0);
 
-                            orderList.add(addOrder);
+                            //orderList.add(addOrder);
 
-                            insertOrder(personalcare, orderList, order1, item, totalQty,totalAll);
+                            
 
                         }while(addOrder == 'Y');
                         break;
@@ -205,17 +226,14 @@ public class Main {
                 // orderList.toArray();
                 System.out.println(orderList.toString());
                 System.out.println(totalAll);
+                System.out.println(totalQty);
 
             }
-            
-        }
+        
 
     private static void insertOrder(ArrayList<ProductCategory> product, ArrayList<Character> orderList, Orders order1,
             int item,ArrayList<Integer>totalQty,ArrayList<Double>totalAll) {
-        
-        //show item name
-        String itemName = product.get(item).toString();
-        order1.displayOrder1(itemName);
+    
 
         //calculate total qty
         int productQty = totalQty.get(item);
@@ -227,9 +245,13 @@ public class Main {
         double totalProductPrice = order1.calcTotalPrice(productPrice);
         totalAll.add(Double.valueOf(totalProductPrice));
 
+        //show item name
+        String itemName = product.get(item).toString();
+        order1.displayOrder1(itemName);
+
         // System.out.println(order1.displayOrder());
         // System.out.println(products);
-        // order1.displayOrder1(products,quantity);
+        // order1.displayOrder1(products,quantity);,
         // orderList.add();
         
     

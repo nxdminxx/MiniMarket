@@ -9,7 +9,7 @@ class Orders{
     private double totalPrice;
     private static int numOfOrder = 0;
     ProductCategory product;
-    public Object totalQty;
+    private String orderID;
     
     // ArrayList<Orders> orderList = new ArrayList<Orders>();
     // ArrayList<Orders> orderID = new ArrayList<Orders>(); 
@@ -41,8 +41,8 @@ class Orders{
         return totalPrice;
     }
 
-    public void setOrderID(String orderID){
-        
+    public void setOrderID(Customer customer) {
+        this.orderID = customer.getCustId();
     }
     public void displayOrder1(String product){
 
