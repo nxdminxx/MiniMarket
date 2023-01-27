@@ -71,6 +71,7 @@ public class Main {
                 cannedfood.add(beans);
                 cannedfood.add(corn);
                 cannedfood.add(sardines);
+                cannedfood.add(tuna);
                 cannedfood.add(beef);
                 cannedfood.add(tomato);
 
