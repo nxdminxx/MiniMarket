@@ -2,16 +2,15 @@ package MiniMarket;
 
 import java.util.ArrayList;
 
-class Orders{
+public class Orders{
 
     private int quantity;
     Customer customer;
     private double totalPrice;
     private static int numOfOrder = 0;
     ProductCategory product;
-    private String orderID;
     
-    // ArrayList<Orders> orderList = new ArrayList<Orders>();
+    ArrayList<ProductCategory> orderList = new ArrayList<ProductCategory>();
     // ArrayList<Orders> orderID = new ArrayList<Orders>(); 
 
 
@@ -41,10 +40,19 @@ class Orders{
         return totalPrice;
     }
 
-    public void setOrderID(Customer customer) {
-        this.orderID = customer.getCustId();
+    public void setOrderID(ProductCategory product){
+        // ArrayList myOrder = new ArrayList();
+        orderList.add(product);
+        
     }
-    public void displayOrder1(String product){
+    public String orderToString(){
+
+        return orderList.toString();
+    }
+    public ArrayList getOrderList(){
+        return orderList;
+    }
+    public void displayOrder1(String product,int quantity){
 
         System.out.println("\nYour Order");
         System.out.println("\nProduct \tID \tWeight/Volume \tPrice (RM) \tQuantity \tTotal (RM)");
