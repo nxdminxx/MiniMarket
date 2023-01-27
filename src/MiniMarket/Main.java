@@ -98,6 +98,7 @@ public class Main {
                 String phone = input.nextLine();
                 Customer customer1 = new Customer(phone,name, phone);
                 
+                //buat try cacth
                 do{
                     System.out.println("\nCATEGORY");
                     System.out.println("(a)Personal Care\n(b)Frozen Foods/Meats\n(c)Canned Foods\n(d)Produced Foods");
@@ -203,8 +204,11 @@ public class Main {
                     addFromCategory = input.next().charAt(0);
 
                 }while(addFromCategory =='Y');
+
                 System.out.print("\nCollect Order Option : \n(a)Delivery (Chargers RM10)\n(b)Pickup (No added chargers)\nChoose your preferable option : ");
                 char service = input.next().charAt(0);
+
+                //try cacth
                 if (service == 'a'){
                     pickUp = false;
                     System.out.print("Enter your address : ");
