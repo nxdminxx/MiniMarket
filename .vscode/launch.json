@@ -4,16 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "MiniMarket.Main",
-<<<<<<< HEAD
             "projectName": "MiniMarket_f9c8ed4b"
-=======
-            "projectName": "MiniMarket_510c0d78"
->>>>>>> 7e2cfec0cc477eece3076796001ebd6d9141c4f5
         },
         {
             "type": "java",
@@ -27,6 +24,13 @@
             "request": "launch",
             "mainClass": "MiniMarket.MiniMart",
             "projectName": "MiniMarket_c93faf50"
-        }
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "MiniMarket.Main",
+            "projectName": "MiniMarket_510c0d78"
+        },
     ]
 }
