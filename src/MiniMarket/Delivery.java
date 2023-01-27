@@ -1,11 +1,18 @@
 package MiniMarket;
 
 public class Delivery {
-
-    public double calcDeliveryCharge(double charge){
-        
-        deliveryCharge = charge;
-        return deliveryCharge; 
+    String address;
+    Orders order;
+    Delivery(){
+        address = "";
     }
-
+    Delivery(String address){
+        this.address = address;
+    }
+    public String getAddress() {
+        return address;
+    }
+    public void setAddress(String address){
+        this.address = address;
+    }
 }
