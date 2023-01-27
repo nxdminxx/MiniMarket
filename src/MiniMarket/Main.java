@@ -273,6 +273,7 @@ public class Main {
 
     private static void insertOrder(ArrayList<ProductCategory> product, ArrayList<Orders> orderList, Orders order1,
             int item, int quantity,ArrayList<Double>totalAllArray,ArrayList<Integer>quantityItemArray,int numItem) {
+
         numItem = numItem + 1;        
         double productPrice = product.get(item).getProductPrice();
         order1.setQuantity(quantity);
@@ -280,8 +281,7 @@ public class Main {
         double totalProductPrice = order1.calcTotalPrice(productPrice);
         quantityItemArray.add(Integer.valueOf(quantity));
         totalAllArray.add(Double.valueOf(totalProductPrice));
- 
-        
+
     
     }
         
