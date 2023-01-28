@@ -45,13 +45,16 @@ public class Orders{
         orderList.add(product);
         
     }
+    
     public String orderToString(){
 
         return orderList.toString();
     }
+
     public ArrayList getOrderList(){
         return orderList;
     }
+
     public void displayOrder1(String product,int quantity){
 
         System.out.println("\nYour Order");

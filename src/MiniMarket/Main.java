@@ -230,11 +230,11 @@ public class Main {
                         pickup1.setPickupTime(pickUpTime);
                     }
                 }
+
                 //Display Reciept and My OrderList
                 DisplayMyOrderList(totalAllArray,quantityItemArray, order1,customer1,address1,pickUp);
                 //Display Total Order
                 DisplayTotal(totalAllArray, totalAll,pickUp);
-          
 
             }
             
