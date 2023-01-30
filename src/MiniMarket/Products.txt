@@ -1,0 +1,21 @@
+PC1;Hair Shampoo;170ml;12.50;Personal Care
+PC2;Body Wash;950ml;18.90;Personal Care
+PC3;Toothpaste;100g;9.60;Personal Care
+PC4;Tooth Brush;50g;5.00;Personal Care
+PC5;Face Wash;100ml;9.00;Personal Care
+FF1;Frozen Fries;1kg;13.00;Frozen Foods
+FF2;Chicken Nuggets;1kg;15.90;Frozen Foods
+FF3;Chicken Meat;300g;17.80;Frozen Foods
+FF4;Beef Meat;300g;19.90;Frozen Foods
+FF5;Frozen Pizza;180g;8.10;Frozen Foods
+CF1;Baked Beans;425g;4.46;Canned Foods
+CF2;Canned Corn;418g;5.39;Canned Foods
+CF3;Sardines;155g;4.65;Canned Foods
+CF4;Canned Tuna;150g;8.81;Canned Foods
+CF5;Tomato Sauce;220g;4.71;Canned Foods
+PF1;Broccoli;500g;12.35;Produced Foods
+PF2;Red Potatoes;500g;10.65;Produced Foods
+PF3;Eggplants;150g;5.45;Produced Foods
+PF4;Fresh Eggs;12pcs;10.11;Produced Foods
+PF5;Fresh Banana;800g;4.90;Produced Foods
+PF6;Fresh Apples;500g;8.96;Produced Foods
