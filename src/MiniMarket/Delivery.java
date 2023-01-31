@@ -1,27 +1,23 @@
 package MiniMarket;
 
-public class Delivery extends Orders{
-    private String deliveryAddress; 
-    private double deliveryCharge;
+public class Delivery {
 
-    public Delivery(){
-    }
-    public Delivery(Customer cust, String deliveryAddress){
-        this.deliveryAddress = deliveryAddress;
-    }
-
-    public String getDeliveryAddress(){
-        return deliveryAddress;
+    String address;
+    Orders order;
+    
+    Delivery(){
+        address = "";
     }
 
-    public void setDeliveryAddress(String address){
-        deliveryAddress = address;
+    Delivery(String address){
+        this.address = address;
     }
 
-    public double calcDeliveryCharge(double charge){
-        
-        deliveryCharge = super.calcTotalPrice + charge;
-        return deliveryCharge; 
+    public String getAddress() {
+        return address;
     }
 
+    public void setAddress(String address){
+        this.address = address;
+    }
 }
